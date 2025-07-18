@@ -7,5 +7,26 @@ body{
     padding: 10px 0;
 }
 
+#info-block {
+    padding-bottom: 30px;
+}
+
+.deals {
+  background-color: red;
+  height: 50px;
+  width: 100%;
+  display: flex;             
+  align-items: center;        
+  justify-content: center;    
+  font-weight: bold;          
+  font-size: 24px;            
+  color: white;               
+}
+
+
+#cart-count {
+  font-size: 0.75rem;
+  vertical-align: top;
+}
 
 
