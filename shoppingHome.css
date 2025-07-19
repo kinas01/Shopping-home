@@ -29,4 +29,56 @@ body{
   vertical-align: top;
 }
 
+.big-box{
+  width: 100%;
+  height: 300px;
+  background-color: red;
+ 
+}
+
+
+.big-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+   padding: 0%;
+   margin: 0%;
+
+ /* flex-wrap: wrap; /* good for responsiveness */
+}
+
+.big-box .content {
+  flex: 1;
+  color: white;
+  margin-left: 5%;
+  
+}
+
+.big-box .images {
+  display: flex;
+  gap: 0px;
+}
+
+.big-box .images img {
+  width: 200px;
+  height: 300px;
+  border: 0px;
+  padding: 0px ;
+  align-items: end;
+
+
+}
+
+.office-deal {
+  background-color: #cd3232;
+  border-radius: 10%;
+  height: 40px;
+  width: 150px;
+  border: 20px;
+}
+
+.office-deal:hover{
+  background-color: #ff00f2;
+}
+
 

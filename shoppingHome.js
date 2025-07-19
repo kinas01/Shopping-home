@@ -1,42 +1,6 @@
 
-  // Store cart in memory (optional: use localStorage to persist)
+  // Initialize cart
   let cart = [];
-
-  // Update the cart count badge
-  function updateCartCount() {
-    const count = cart.reduce((total, item) => total + item.quantity, 0);
-    document.getElementById("cart-count").textContent = count;
-  }
-
-  // Render items in the dropdown
-  function updateCartDropdown() {
-    const dropdown = document.getElementById("cart-dropdown-items");
-    dropdown.innerHTML = "";
-
-    if (cart.length === 0) {
-      dropdown.innerHTML = "<p class='text-muted text-center'>Cart is empty</p>";
-      return;
-    }
-
-    cart.forEach(item => {
-      const itemElement = document.createElement("div");
-      itemElement.className = "d-flex justify-content-between align-items-center mb-2";
-
-      itemElement.innerHTML = `
-        <div>
-          <img src="${item.image}" alt="${item.name}" style="width: 40px; height: 40px; object-fit: cover;">
-        </div>
-        <div class="ms-2 flex-grow-1">
-          <small>${item.name}</small><br>
-          <small>₦${item.price.toLocaleString()} x ${item.quantity}</small>
-        </div>
-        <div>
-          <small>₦${(item.price * item.quantity).toLocaleString()}</small>
-        </div>
-      `;
-      dropdown.appendChild(itemElement);
-    });
-  }
 
   // Add to cart button click
   document.querySelectorAll(".add-to-cart-btn").forEach(button => {
@@ -87,7 +51,38 @@
     updateCartDropdown();
   });
 
-  // Initialize
+  // Function to update the cart count badge
+  function updateCartCount() {
+    const count = cart.reduce((sum, item) => sum + item.quantity, 0);
+    document.getElementById("cart-count").textContent = count;
+  }
+
+  // Function to update cart dropdown items
+  function updateCartDropdown() {
+    const container = document.getElementById("cart-dropdown-items");
+    container.innerHTML = ""; // Clear previous items
+
+    if (cart.length === 0) {
+      container.innerHTML = "<p class='text-center'>Your cart is empty</p>";
+      return;
+    }
+
+    cart.forEach(item => {
+      const itemElement = document.createElement("div");
+      itemElement.className = "d-flex align-items-center mb-2";
+      itemElement.innerHTML = `
+        <img src="${item.image}" alt="${item.name}" style="width: 40px; height: 40px; object-fit: cover;">
+        <div class="ms-2 flex-grow-1">
+          <div>${item.name}</div>
+          <small>₦${item.price.toLocaleString()} × ${item.quantity}</small>
+        </div>
+        <div class="fw-bold">₦${(item.price * item.quantity).toLocaleString()}</div>
+      `;
+      container.appendChild(itemElement);
+    });
+  }
+
+  // Initialize display
   updateCartCount();
   updateCartDropdown();
 
