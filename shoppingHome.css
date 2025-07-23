@@ -139,10 +139,9 @@ body{
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   height: 90%;
   margin: 0% 0%;
-  max-width: 1140px;
+  width: 100%;
   line-height: normal;
   border: #cd3232;
-  width: 100%;
   
 }
 
@@ -199,6 +198,60 @@ body{
 .shop-now p {
   color: #cd3232;
   font-weight: bolder;
+  font-size: 20px;
+}
+
+.rich-store {
+   background-color: #cd3232;
+  width: 100%;
+  height: 70px;
+  color: white;
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+}
+
+.second-col p {
+  color: white;
+  font-size: 25px;
+}
+
+.online-shopping {
+  background-color: #cd3232;
+  width: 100%;
+  height: 80px;
+  color: white;
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 23px;
+}
+
+
+.leading-online {
+  color: #cd3232;
+  font-size: 20px;
+  margin-top: 20px;
+  margin-bottom: 35px;
+}
+
+.product {
+  color: #cd3232;
+  font-size: 20px;
+}
+
+.site-link {
+  color: green;
+  font-weight: bold;
+  font-size: 18px;
+  text-decoration: underline;
+}
+
+.destination {
+  color: #cd3232;
   font-size: 20px;
 }
 
