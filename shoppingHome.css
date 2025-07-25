@@ -11,6 +11,17 @@ body{
     padding-bottom: 30px;
 }
 
+.carousel-inner {
+  height: 400px; 
+}
+
+.carousel-inner img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+
 .deals {
   background-color: #cd3232;
   height: 50px;
